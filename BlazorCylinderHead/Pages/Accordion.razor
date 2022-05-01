@@ -1,0 +1,28 @@
+﻿@page "/accordion"
+
+<strong>Sparkplug component</strong>
+<h3>Accordion</h3>
+<hr/>
+<SPAccordion>
+    <Collapse Visible = "@collapse0Visible">
+        <CollapseHeader>
+            <Heading Size="HeadingSize.h5">
+                <Button Clicked="@(()=> collapse0Visible = !collapse0Visible)">
+                    Item 0 Heading
+                </Button>
+            </Heading>
+        </CollapseHeader>
+        <CollapseBody>
+            This is the visible content 
+            is the visible content
+            the visible content
+            visible content
+            contents.
+            
+        </CollapseBody>
+    </Collapse>
+</SPAccordion>
+
+@code {
+    bool collapse0Visible = false;
+}
