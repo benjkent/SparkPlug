@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SparkPlugTestComponent\SparkPlugTestComponent.csproj" />
     <ProjectReference Include="..\SparkPlug\SparkPlugAccordion.csproj" />
   </ItemGroup>
 

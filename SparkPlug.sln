@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkPlugAccordion", "Spark
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCylinderHead", "BlazorCylinderHead\BlazorCylinderHead.csproj", "{7E9B4802-56CD-4B26-97F9-CF87BF10C611}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlugTestComponent", "SparkPlugTestComponent\SparkPlugTestComponent.csproj", "{784C1CB3-7CD6-4E21-B290-F3419F16DE9E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{7E9B4802-56CD-4B26-97F9-CF87BF10C611}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E9B4802-56CD-4B26-97F9-CF87BF10C611}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E9B4802-56CD-4B26-97F9-CF87BF10C611}.Release|Any CPU.Build.0 = Release|Any CPU
-		{784C1CB3-7CD6-4E21-B290-F3419F16DE9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{784C1CB3-7CD6-4E21-B290-F3419F16DE9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{784C1CB3-7CD6-4E21-B290-F3419F16DE9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{784C1CB3-7CD6-4E21-B290-F3419F16DE9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
