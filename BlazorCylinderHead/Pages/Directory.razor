@@ -1,0 +1,25 @@
+﻿@page "/directory"
+@using SparkPlugAccordion
+
+<h3>Sparkplug Component</h3>
+<hr/>
+
+<SPAccordion>
+    <Collapse Visible="@collapse0Visible">
+        <CollapseHeader>
+            <Heading Size="HeadingSize.h5">
+                <Button Clicked="@(()=> collapse0Visible = !collapse0Visible)">
+                    First Heading
+                </Button>
+            </Heading>
+        </CollapseHeader>
+        <CollapseBody>
+            This is the content that will be shown
+            or hidden when the head is opened 
+            by the brilliant and engaged user.
+        </CollapseBody>
+    </Collapse>
+</SPAccordion>
+@code {
+    bool collapse0Visible = false;
+}

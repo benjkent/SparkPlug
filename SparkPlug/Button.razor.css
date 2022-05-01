@@ -1,0 +1,39 @@
+﻿
+/*This css controls the Accordion rotating icon.*/
+.accordContainer {
+    width: 20px;
+    height: 20px;
+}
+
+.rotate180 {
+    transition: 0.5s;
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+.rotate180--0 {
+    transition: 0.5s;
+    transform-origin: center;
+    transform: rotate(0);
+}
+
+.rotateNeg180 {
+    transition: 0.5s;
+    transform-origin: center;
+    transform: rotate(-180deg);
+}
+
+.rotateNeg180--start {
+    transition: 0.5s;
+    transform-origin: center;
+    transform: rotate(0);
+}
+
+.bi.bi-chevron-up, .bi.bi-chevron-down {
+    /*font-size value needs to be the same as
+    the ".accordContainer" width/height.
+        This ensures the rotation occurs 
+        from the center of the element.
+    */
+    font-size: 20px;
+}
