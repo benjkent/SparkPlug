@@ -1,0 +1,17 @@
+﻿<div class="accordHeading @HeadingTextSize">
+    @ChildContent
+</div>
+
+@code {
+    [Parameter]
+    public HeadingSize Size { get; set; } = HeadingSize.h6;
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    protected string? HeadingTextSize { get; private set; }
+
+    protected override void OnParametersSet()
+    {
+        HeadingTextSize = Size.ToString();
+    }
+}

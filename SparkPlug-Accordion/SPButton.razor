@@ -1,0 +1,59 @@
+﻿<div class="row">
+    <div class="col-auto me-auto ps-3">
+        <label>
+            @ChildContent
+        </label>
+    </div>
+    <div class="col-auto pe-2 align-content-center">
+        <div @onclick="Collapsing" class="@IconRotateDirection">
+            <i class="@Icon" />
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public EventCallback<string> Clicked { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [CascadingParameter]
+    protected bool Visible { get; set; }
+
+    protected string Icon { get; private set; }
+
+    private string IconRotateDirection { get; set; }
+
+    public bool IconUp;
+
+    protected override void OnInitialized()
+    {
+        Icon = Visible ? "bi bi-chevron-up" : "bi bi-chevron-down";
+        IconUp = Visible ? true : false;
+    }
+
+    private void Collapsing()
+    {
+        Clicked.InvokeAsync();
+        if (IconUp)
+            UpStartIconBehavior();
+        else
+            DownStartIconBehavior();
+    }
+
+    private void UpStartIconBehavior()
+    {
+        if (Visible)
+            IconRotateDirection = "rotate180";
+        else
+            IconRotateDirection = "roate180--0";
+    }
+    private void DownStartIconBehavior()
+    {
+        if (!Visible)
+            IconRotateDirection = "rotateNeg180";
+        else
+            IconRotateDirection = "rotateNeg180--start";
+    }
+}

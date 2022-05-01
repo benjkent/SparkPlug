@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SparkPlug\SparkPlugAccordion.csproj" />
+    <ProjectReference Include="..\SparkPlug-Accordion\SparkPlug-Accordion.csproj" />
   </ItemGroup>
 
 </Project>
