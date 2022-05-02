@@ -14,13 +14,15 @@
         @ChildContent
 </div>
 
-@code {
+    @code {
     [Parameter]
     public string HeaderContents { get; set; }
     [Parameter]
     public HeadingSize Size { get; set; }
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+    [CascadingParameter]
+    protected bool IsTopLevel { get; set; }
 
     public bool Visible { get; set; }
 
@@ -33,7 +35,11 @@
     public void UpdateVisible()
     {
         Visible = !Visible;
-        Visibility = Visible ? "accordCollapseVisible" : "accordCollapseHidden";
-    }
 
+        if (IsTopLevel)
+            Visibility = Visible ? "accordCollapseVisible" : "accordCollapseHidden";
+        else
+             Visibility = Visible ? "subAccordCollapseVisible" : "accordCollapseHidden";
+    }
+    
 }
