@@ -4,25 +4,49 @@
 <h3>Accordion</h3>
 <hr/>
 <SPAccordion>
-    <SPCollapse Visible = "@collapse0Visible">
-        <SPCollapseHeader>
-            <SPHeading Size="HeadingSize.h5">
-                <SPButton Clicked="@(()=> collapse0Visible = !collapse0Visible)">
-                    Item 0 Heading
-                </SPButton>
-            </SPHeading>
-        </SPCollapseHeader>
+    <SPCollapse 
+        HeaderContents="This is my Header "
+        Size="HeadingSize.h3">
         <SPCollapseBody>
-            This is the visible content 
-            is the visible content
-            the visible content
-            visible content
-            contents.
-            
+            This content will show up when you click.
         </SPCollapseBody>
     </SPCollapse>
 </SPAccordion>
-
+<SPAccordion>
+    <SPCollapse
+        HeaderContents="This is my other Header"
+        Size="HeadingSize.h3">
+        <SPCollapseBody>
+            This is more contents that will show 
+        </SPCollapseBody>
+    </SPCollapse>
+</SPAccordion>
+<SPAccordion>
+    <SPCollapse
+        HeaderContents="Multi-level Accordion"
+        Size = "HeadingSize.h3">
+        <SPCollapseBody>
+            <SPAccordion>
+                <SPCollapse
+                    HeaderContents="Sub Level Item A "
+                    Size = "HeadingSize.h5">
+                    <SPCollapseBody>
+                        Here is my contents
+                    </SPCollapseBody>
+                </SPCollapse>
+            </SPAccordion>
+            <SPAccordion>
+                <SPCollapse
+                    HeaderContents="Sub Level Item B "
+                    Size = "HeadingSize.h5">
+                    <SPCollapseBody>
+                        Here is my contents
+                    </SPCollapseBody>
+                </SPCollapse>
+            </SPAccordion>
+        </SPCollapseBody>
+    </SPCollapse>
+</SPAccordion>
 @code {
-    bool collapse0Visible = false;
+    
 }

@@ -1,25 +1,39 @@
 ﻿<div class="row align-center accordCollapse @Visibility">
     <CascadingValue Value="@Visible">
-        @SPCollapseHeader
+        <SPCollapseHeader> 
+            <SPHeading Size=@Size>
+                <SPButton Clicked="UpdateVisible">
+                    @HeaderContents
+                </SPButton>
+            </SPHeading>
+        </SPCollapseHeader>
     </CascadingValue>
 </div>
 <div class="row">
-    @if(Visible)
-        @SPCollapseBody
+    @if (Visible)
+        @ChildContent
 </div>
 
 @code {
     [Parameter]
-    public RenderFragment SPCollapseHeader { get; set; }
+    public string HeaderContents { get; set; }
     [Parameter]
-    public RenderFragment SPCollapseBody { get; set; }
+    public HeadingSize Size { get; set; }
     [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
     public bool Visible { get; set; }
 
     protected string Visibility { get; set; }
 
-    protected override void OnParametersSet()
+    protected override void OnInitialized()
     {
+        Visible = false;
+    }
+    public void UpdateVisible()
+    {
+        Visible = !Visible;
         Visibility = Visible ? "accordCollapseVisible" : "accordCollapseHidden";
     }
+
 }
