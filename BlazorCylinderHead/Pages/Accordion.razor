@@ -3,7 +3,7 @@
 <strong>Sparkplug component</strong>
 <h3>Accordion</h3>
 <hr/>
-<SPAccordion>
+<SPAccordion IsTopLevel="true">
     <SPCollapse 
         HeaderContents="This is my Header "
         Size="HeadingSize.h3">
@@ -12,7 +12,7 @@
         </SPCollapseBody>
     </SPCollapse>
 </SPAccordion>
-<SPAccordion>
+<SPAccordion IsTopLevel="true">
     <SPCollapse
         HeaderContents="This is my other Header"
         Size="HeadingSize.h3">
@@ -21,12 +21,12 @@
         </SPCollapseBody>
     </SPCollapse>
 </SPAccordion>
-<SPAccordion>
+<SPAccordion IsTopLevel="true">
     <SPCollapse
         HeaderContents="Multi-level Accordion"
         Size = "HeadingSize.h3">
         <SPCollapseBody>
-            <SPAccordion>
+            <SPAccordion IsTopLevel="false">
                 <SPCollapse
                     HeaderContents="Sub Level Item A "
                     Size = "HeadingSize.h5">
@@ -35,7 +35,7 @@
                     </SPCollapseBody>
                 </SPCollapse>
             </SPAccordion>
-            <SPAccordion>
+            <SPAccordion IsTopLevel="false">
                 <SPCollapse
                     HeaderContents="Sub Level Item B "
                     Size = "HeadingSize.h5">
