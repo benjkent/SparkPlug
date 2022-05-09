@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BlazorNoise\SparkPlug-AudioPlayer\SparkPlug-AudioPlayer.csproj" />
     <ProjectReference Include="..\SparkPlug-Accordion\SparkPlug-Accordion.csproj" />
   </ItemGroup>
 
