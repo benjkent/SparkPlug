@@ -1,11 +1,15 @@
 ﻿@page "/player"
 
 <strong>Sparkplug component</strong>
-<h3>AudioDetails & CustomPlayer</h3>
+<h3>AudioDetails &</h3>
+<h3>CustomAudioPlayer</h3>
 <hr/>
-<SPAudioDetails ArtistName="Benjamin Tissot" AudioTitle="Creative Minds" ImageSource="../images/creativeminds.jpg" />
-<SPCustomPlayer AudioSource="../sounds/creativeminds.mp3"/>
+<SPAudioDetails ArtistName="@ArtistName" AudioTitle="@AudioTitle" ImageSource="@ImageSource" />
+<SPCustomAudioPlayer AudioSource="@AudioSource"/>
 
 @code {
-
+    public string ArtistName { get; set; } = "Benjamin Tissot";
+    public string AudioTitle { get; set; } = "Creative Minds @Bensound.com";
+    public string ImageSource { get; set; } = "../images/creativeminds.jpg";
+    public string AudioSource { get; set; } = "../sounds/creativeminds.mp3";
 }

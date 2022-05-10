@@ -1,0 +1,26 @@
+﻿<div class="container mb-4 pt-4 pb-4">
+    <div class="row justify-content-center mb-2">
+        <div class="col-auto">
+            <img src="@ImageSource" class="rounded-circle" />
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <p>@ArtistName</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h3>@AudioTitle</h3>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string ImageSource { get; set; }
+    [Parameter]
+    public string ArtistName { get; set; }
+    [Parameter]
+    public string AudioTitle { get; set; }
+}

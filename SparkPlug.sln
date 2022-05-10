@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCylinderHead", "Blazo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkPlug-Accordion", "SparkPlug-Accordion\SparkPlug-Accordion.csproj", "{E98B2F96-C085-4EE9-8531-5680A41A1AB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug-AudioPlayer", "SparkPlug-AudioPlayer\SparkPlug-AudioPlayer.csproj", "{C00638DC-12B9-42E0-B96F-5E47838EF572}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkPlug-AudioPlayer", "SparkPlug-AudioPlayer\SparkPlug-AudioPlayer.csproj", "{C00638DC-12B9-42E0-B96F-5E47838EF572}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

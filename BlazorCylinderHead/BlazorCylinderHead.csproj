@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SparkPlug-Accordion\SparkPlug-Accordion.csproj" />
+    <ProjectReference Include="..\SparkPlug-AudioPlayer\SparkPlug-AudioPlayer.csproj" />
   </ItemGroup>
 
 </Project>
