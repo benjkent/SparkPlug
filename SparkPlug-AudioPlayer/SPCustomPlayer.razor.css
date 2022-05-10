@@ -1,0 +1,102 @@
+﻿/* Enables the specific bootstap icons play pause reload to render directly from this library */
+@font-face {
+    font-family: "bootstrap-icons";
+    src: url("./fonts/bootstrap-icons.woff2?524846017b983fc8ded9325d94ed40f3") format("woff2"), url("./fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff");
+}
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.bi-play-circle::before {
+    content: "\f4f3";
+}
+.bi-pause-circle::before {
+    content: "\f4c2";
+}
+.bi-arrow-repeat::before {
+    content: "\f130";
+}
+/*END Bootstap icon Definition info*/
+
+.controls {
+    overflow: visible;
+    background: transparent;
+    width: 100%;
+    /*height:50px;*/
+    height: 20px;
+    position: relative;
+}
+
+    /*select all elements who's parent are .controls*/
+    .controls > * {
+        width: 100%;
+        height: 100%;
+        /*margin-left: 0.1953125%;*/
+        display: block;
+    }
+
+    .controls .progress {
+        cursor: pointer;
+        width: 75.390625%;
+    }
+
+    .controls #my-progress {
+        display: block;
+        width: 250px;
+        height: 20px;
+        margin-top: 0px;
+        margin-left: 0px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: none;
+        overflow: hidden;
+        background-color: #a9a9a969;
+        border-radius: 30px;
+    }
+
+        .controls #my-progress span {
+            width: 0%;
+            height: 70%;
+            display: inline-block;
+            background: rgb(2,0,36);
+            background: linear-gradient(43deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 21%, rgba(0,212,255,1) 100%);
+            transition: 500ms;
+            transition-property: width;
+            transition-timing-function: ease;
+            border-radius: 25px;
+        }
+
+/*Play button style*/
+i#playpausebutton.bi.bi-pause-circle,
+i#playpausebutton.bi.bi-play-circle,
+i#playpausebutton.bi.bi-arrow-repeat {
+    color: darkgray;
+    font-size: 72px;
+}
+
+/*Current track position text*/
+/*Total duration of track*/
+span.icon i{
+    color: dimgray;
+}
+span.normal {
+    font-size: 16px;
+    height:40px;
+}
+span.small {
+    font-size: 12px;
+    height:40px;
+    padding-left:20px;
+}

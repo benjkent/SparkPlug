@@ -1,0 +1,91 @@
+﻿<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <span class="icon normal" title="progress">
+                <i id="currentProgress">00:00:00</i>
+            </span>
+        </div>
+    </div>
+    <div class="container mb-1">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a class="icon" title="Playing">
+                    <i id="playpausebutton" class="bi bi-play-circle"
+                        @onclick="AudioPlay" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-0">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <!--Danger: Think it through first.-->
+                <div class="controls" id="audio-controls" data-state="visable">
+                    <div class="my-progress">
+                        <div id="my-progress" value="0" min="0">
+                            <span id="my-progress-bar"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--Danger END:-->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-0" style="width:160px;"/>
+            <div class="col-0" style="width:10px;">
+                <span class="icon small" title="progress">
+                    <i id="trackLength">00:00:00</i>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <audio id="audioplayer" src="@AudioSource" />
+    </div>
+    
+</div>
+
+
+@code {
+    [Parameter]
+    public string AudioSource { get; set; }
+
+    //// This may be needed for some reason....
+    //// Important: js would need to get this value.
+    //// to identify which audioplayer to act upon.
+    //[Parameter]
+    //public string AudioPlayerId { get; set; } 
+
+    [Inject]
+    public IJSRuntime JsRuntime { get; set; }
+    private IJSObjectReference jsModule;
+
+    public bool isplaying = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        jsModule = await JsRuntime.InvokeAsync<IJSObjectReference>("import", "/_content/SparkPlug-AudioPlayer/javascript/CustomAudioPlayer.js");
+        await GetAudioData();
+    }
+    public async Task AudioPlay()
+    {
+        if (!isplaying)
+        {
+            isplaying = true;
+            await jsModule.InvokeAsync<string>("playbuttonaudio", isplaying);
+        }
+        else
+        {
+            isplaying = false;
+            await jsModule.InvokeAsync<string>("playbuttonaudio", isplaying);
+        }
+    }
+    public async Task GetAudioData()
+    {
+        await jsModule.InvokeAsync<string>("getAudioDuration");
+
+        await jsModule.InvokeAsync<string>("currenttime");
+    }
+}
