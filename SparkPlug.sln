@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCylinderHead", "Blazo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkPlug-Accordion", "SparkPlug-Accordion\SparkPlug-Accordion.csproj", "{E98B2F96-C085-4EE9-8531-5680A41A1AB6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SparkPlug-AudioPlayer", "..\BlazorNoise\SparkPlug-AudioPlayer\SparkPlug-AudioPlayer.csproj", "{E594437A-E97C-4253-ADA7-50915778A9A0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{E98B2F96-C085-4EE9-8531-5680A41A1AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E98B2F96-C085-4EE9-8531-5680A41A1AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E98B2F96-C085-4EE9-8531-5680A41A1AB6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E594437A-E97C-4253-ADA7-50915778A9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E594437A-E97C-4253-ADA7-50915778A9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E594437A-E97C-4253-ADA7-50915778A9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E594437A-E97C-4253-ADA7-50915778A9A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
