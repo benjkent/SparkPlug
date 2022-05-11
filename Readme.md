@@ -33,7 +33,7 @@ Accordion has three parameters to create the component and an area to place cont
 4. Content
     - Not a property, rather a space to place content or add additional accordion elements.
 
-#### The Blazor project included in this project has sample tabs to show examples of component usage in action.
+#### The Blazor project CylinderHead included in this project has sample tabs to show examples of component usage in action.
 ***
 # SparkPlug AudioPlayer
 ### How to use it
@@ -54,3 +54,5 @@ The SPCustomAudioPlayer has only one parameter.
 1. AudioSource
     - A string defining the file location of the .mp3 audio file.
 
+#### The Blazor project CylinderHead included in this project has sample tabs to show examples of component usage in action.
+***
