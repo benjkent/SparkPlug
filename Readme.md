@@ -1,7 +1,7 @@
 Project SparkPlug is a collection of C# Razor Class Libraries that can be used with Blazor (wasm) applications.
 
-- SparkPlug - Accordion is an all-in-one multi-tiered accordion based on bootstrap accordion.
-- SparkPlug - AudioPlayer offers a simplified audio component with all the feature you want. When you need a custom player  to play, pause, and track audio without the swiss-army-knife defaults of the reglar html audio element. 
+- SparkPlug - Accordion is an all-in-one multi-tiered accordion with animated arrow feature.
+- SparkPlug - AudioPlayer offers a simplified audio component with all the feature you want. When you need a custom player  to play, pause, and track audio without the swiss-army-knife defaults of the regular html audio element. 
 
 # Usage
 Each C# Razor Class Library is optimized to work independently with only a project reference to the Library from a Blazor wasm applicaition and a @using statement in the _Imports.razor file. 
