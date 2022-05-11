@@ -37,7 +37,7 @@ Accordion has three parameters to create the component and an area to place cont
 ***
 # SparkPlug AudioPlayer
 ### How to use it
-AudioPlayer has two elements. Elements can be used independent of each other to created a complete audio component.
+AudioPlayer has two elements. Elements can be used independent of each other or together to create a complete audio component.
 
 The SPAudioDetails component has three properties.
 
